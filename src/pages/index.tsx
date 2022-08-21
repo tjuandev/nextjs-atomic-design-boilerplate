@@ -1,3 +1,5 @@
 export default function Home() {
-  return <div>teste</div>;
+  const bob = 1
+
+  return <div>teste</div>
 }
