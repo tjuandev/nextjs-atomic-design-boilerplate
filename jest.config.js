@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 module.exports = {
   testEnvironment: 'jest-environment-jsdom',
   collectCoverage: true,
