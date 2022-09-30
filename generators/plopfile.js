@@ -54,8 +54,8 @@ module.exports = function (/** @type {import('plop').NodePlopAPI} */ plop) {
       },
       {
         type: 'add',
-        path: `${componentPath}/style.tsx`,
-        templateFile: 'templates/components/style.tsx.hbs'
+        path: `${componentPath}/styles.tsx`,
+        templateFile: 'templates/components/styles.tsx.hbs'
       }
     ]
   })
