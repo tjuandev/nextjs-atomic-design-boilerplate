@@ -17,8 +17,8 @@ const atomicDesignLayers = [
   }
 ]
 
-const componentsBasePath =
-  '../src/components/{{component_type}}/{{pascalCase name}}'
+const layerPath = `../src/components/{{component_type}}`
+const componentPath = `${layerPath}/{{pascalCase name}}`
 
 module.exports = function (/** @type {import('plop').NodePlopAPI} */ plop) {
   plop.setGenerator('components', {
@@ -38,23 +38,23 @@ module.exports = function (/** @type {import('plop').NodePlopAPI} */ plop) {
     actions: [
       {
         type: 'add',
-        path: `${componentsBasePath}/index.ts`,
+        path: `${layerPath}/index.ts`,
         skipIfExists: true
       },
       {
         type: 'add',
-        path: `${componentsBasePath}/__tests__/{{pascalCase name}}.tsx`,
+        path: `${componentPath}/__tests__/{{pascalCase name}}.tsx`,
         templateFile: 'templates/components/__tests__/index.tsx.hbs',
         force: true
       },
       {
         type: 'add',
-        path: `${componentsBasePath}/index.tsx`,
+        path: `${componentPath}/index.tsx`,
         templateFile: 'templates/components/index.tsx.hbs'
       },
       {
         type: 'add',
-        path: `${componentsBasePath}/style.tsx`,
+        path: `${componentPath}/style.tsx`,
         templateFile: 'templates/components/style.tsx.hbs'
       }
     ]
