@@ -2,8 +2,8 @@
 
 Boilerplate for NextJS Projects using Atomic Design 
 
-### To create Atomic Design Components:
+### For creating Atomic Design Components:
 
-shell```
+shell ```
   yarn generate <componentName>
 ```
